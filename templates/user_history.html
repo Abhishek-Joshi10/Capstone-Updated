@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <title>Results</title>
+    <style>
+        .container {
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          /* Style the header */
+          header {
+            background-color: #A879E7;
+            padding: 15px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+          }
+          table, th, td {
+              border:1px solid black;
+          }
+    </style>
+</head>
+<header>
+    <h2>Welcome {{username}}!</h2>
+</header>
+<body>
+    <div class="container">
+        <h1>User History</h1>
+        <table style="width:100%">
+          <tr>
+            <th>User ID</th>
+            <th>Date</th>
+            <th>User Text</th>
+            <th>Selected Next Word</th>
+          </tr>
+        {% for item in values %}
+          <tr>
+            <td>{{item.user_id}}</td>
+            <td>{{item.date}}</td>
+            <td>{{item.text}}</td>
+            <td>{{item.choice}}</td>
+          </tr>
+        {% endfor %}
+        </table>
+        <br>
+    </div>
+</body>
+</html>

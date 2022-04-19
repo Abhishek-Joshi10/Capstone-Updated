@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+    <title>Results</title>
+    <style>
+        .container {
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          /* Style the header */
+          header {
+            background-color: #A879E7;
+            padding: 15px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+          }
+        #mainMenu {
+            list-style: none;
+            overflow:hidden;
+            margin:0;
+            padding:0;
+        }
+
+        #mainMenu li {
+            float:left;
+            background:orange;
+            text-align: left;
+            font-size: 15px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #mainMenu li a {
+            text-align:center;
+            padding:10px;
+            width:80px;
+        }
+
+        a {
+            display:block;
+        }
+
+    </style>
+</head>
+<header>
+    <h2>Welcome {{username}}!</h2>
+        <div class="container">
+            <nav>
+        		<ul id="mainMenu">
+        			<li><a href="/">Login</a></li>
+        			<li><a href="/user_history">User History</a></li>
+        			<li><a href="/">Logout</a></li>
+        		</ul>
+        	</nav>
+    	</div>
+</header>
+<body>
+    <div class="container">
+        <form action="#" method="POST">
+            <h1>Please type in your message</h1>
+            <p><input type="text" name="text" value="{{text}}" size=100/></p>
+            <p><input type="submit" name= "submit" value="Predict My Next Word"/></p>
+            <br>
+            <p>Suggested next words:  </p>
+            <p>
+            <input type="submit" name="suggestions" value="{{suggestions1}}" size=30/>
+            <input type="submit" name="suggestions" value="{{suggestions2}}" size=30/>
+            <input type="submit" name="suggestions" value="{{suggestions3}}" size=30/>
+            <input type="submit" name="suggestions" value="{{suggestions4}}" size=30/>
+            <input type="submit" name="suggestions" value="{{suggestions5}}" size=30/>
+            </p>
+        </form>
+    </div>
+</body>
+</html>

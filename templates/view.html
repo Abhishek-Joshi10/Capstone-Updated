@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <title>Results</title>
+    <style>
+        .container {
+            width: 75%;
+            margin-left: auto;
+            margin-right: auto;
+          }
+          /* Style the header */
+          header {
+            background-color: #A879E7;
+            padding: 15px;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+          }
+    </style>
+</head>
+<header>
+    <h2>Welcome {{username}}!</h2>
+</header>
+<body>
+    <div class="container">
+        <h1>Please type in your message</h1>
+        <p>
+        {% for item in values %}
+            <p>User: {{item.user}}, ID: {{item.id}}</p>
+        {% endfor %}
+        </p>
+        <br>
+    </div>
+</body>
+</html>
